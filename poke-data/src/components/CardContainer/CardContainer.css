@@ -1,0 +1,16 @@
+.grid {
+  outline: 1px solid #00f;
+  width: 100%;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  outline: 1px solid #f00;
+  height: 300px;
+  width: 200px;
+  border-radius: 15px;
+  justify-self: center;
+}

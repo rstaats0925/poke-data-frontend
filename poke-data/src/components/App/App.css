@@ -1,6 +1,8 @@
 @import url("../../vendor/fonts/fonts.css");
 
 .App {
+  max-width: 1440px;
+  margin: 0 auto;
   /* font-family: "Pokemon";
   background-image: linear-gradient(15deg, green, 45%, purple);
   background-clip: text;
