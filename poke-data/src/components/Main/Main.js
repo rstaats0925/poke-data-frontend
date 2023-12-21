@@ -1,8 +1,9 @@
+import "./Main.css";
 import { React } from "react";
 
 function Main() {
   return (
-    <div>
+    <div className="landing-page">
       Welcome to Poke data! Here you can look up any of the nearly 1,000
       pokemon. This is a single location that you can go to in order to look up
       the statistics of any particular pokemon. Navigate to the pokemon cards by

@@ -1,7 +1,41 @@
-.header {
+.Header {
   outline: 1px solid #f00;
-  height: 50px;
+  /* height: 130px; */
+  padding: 10px 0;
   width: 100%;
-  text-align: center;
-  font-size: 40px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.Header__logo {
+  margin: 0;
+  font-family: "Pokemon";
+  font-size: 48px;
+  color: #000;
+  text-decoration: none;
+}
+
+.Header__explore-link {
+  text-decoration: none;
+  color: black;
+  font-family: Pokemon;
+  font-size: 36px;
+}
+
+.Header__dropdown {
+  width: 132px;
+}
+
+.Header__Go-button {
+  width: 132px;
+}
+
+@media (min-width: 525px) {
+  .Header {
+    grid-template-columns: 5fr repeat(3, 1fr);
+    justify-items: start;
+    column-gap: 10px;
+  }
 }

@@ -3,7 +3,7 @@ import "./CardContainer.css";
 
 function CardContainer() {
   return (
-    <div className="grid">
+    <main className="grid">
       <div className="card" />
       <div className="card" />
       <div className="card" />
@@ -19,7 +19,7 @@ function CardContainer() {
       <div className="card" />
       <div className="card" />
       <div className="card" />
-    </div>
+    </main>
   );
 }
 
