@@ -27,6 +27,7 @@
   font-family: "Pokemon";
   font-size: 32px;
   line-height: 2.1;
+  line-height: 1;
   appearance: none;
   border: none;
 }
