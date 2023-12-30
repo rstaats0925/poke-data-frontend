@@ -7,10 +7,3 @@
   gap: 20px;
   justify-items: center;
 }
-
-.card {
-  outline: 1px solid #f00;
-  height: 300px;
-  width: 200px;
-  border-radius: 15px;
-}

@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="Header">
       <Link className="Header__logo" to="/">
-        Poke-data
+        <h1 className="Header__logo">PokeData</h1>
       </Link>
       <Link className="Header__explore-link" to="/cardContainer">
         Explore Pokemon

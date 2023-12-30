@@ -3,13 +3,9 @@ import React from "react";
 import Card from "../Card/Card";
 
 export default function CardContainer({ data }) {
-  const pokemonCards = data.map((pokemon) => {
-    return <Card sprites={pokemon.sprites} />;
-  });
-
   return (
     <main className="grid">
-      <ul>{pokemonCards}</ul>
+      <Card sprites={data.sprites} name={data.name} number={data.id} />
     </main>
   );
 }

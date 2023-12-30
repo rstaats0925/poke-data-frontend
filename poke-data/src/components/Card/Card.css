@@ -1,9 +1,37 @@
 .card {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+  border: 1px solid #000;
   width: 200px;
   height: 300px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.card__image {
+  /* outline: 1px solid red; */
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  display: block;
 }
 
 .card__info {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+  /* background-color: black; */
+  /* color: white; */
+  height: 61px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-top: 23px;
+}
+
+.info__name {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+.info__number {
+  margin: 0;
+  text-align: center;
 }

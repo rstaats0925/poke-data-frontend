@@ -11,11 +11,12 @@ import { useEffect, useState } from "react";
 import { getPokemon } from "../../utils/api";
 
 function App() {
-  const [pokeData, setPokedata] = useState([]);
+  const [pokeData, setPokedata] = useState({});
 
-  useEffect(async () => {
-    const data = await getPokemon();
-    setPokedata([...data]);
+  useEffect(() => {
+    fetch("https://pokeapi.co/api/v2/pokemon/250")
+      .then((res) => res.json())
+      .then((pokemon) => setPokedata(pokemon));
   }, []);
 
   return (
