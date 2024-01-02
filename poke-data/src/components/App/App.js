@@ -8,15 +8,26 @@ import Footer from "../Footer/Footer";
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import { getPokemon } from "../../utils/api";
-
 function App() {
-  const [pokeData, setPokedata] = useState({});
+  const [pokeData, setPokedata] = useState([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/250")
-      .then((res) => res.json())
-      .then((pokemon) => setPokedata(pokemon));
+    const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
+    const pokemonArray = [];
+    for (let i = 152; i < 251; i++) {
+      fetch(`${baseUrl}${i}`)
+        .then((res) => {
+          if (!res.ok) {
+            return Promise.reject(`Error: ${res.status}`);
+          }
+          return res.json();
+        })
+        .then((pokemon) => pokemonArray.push(pokemon))
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+    setPokedata(pokemonArray);
   }, []);
 
   return (
