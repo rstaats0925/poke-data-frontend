@@ -14,20 +14,31 @@ function App() {
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const pokemonArray = [];
+    const promiseArray = [];
     for (let i = 152; i < 251; i++) {
-      fetch(`${baseUrl}${i}`)
-        .then((res) => {
-          if (!res.ok) {
-            return Promise.reject(`Error: ${res.status}`);
-          }
-          return res.json();
-        })
-        .then((pokemon) => pokemonArray.push(pokemon))
-        .catch((err) => {
-          console.error(err);
-        });
+      console.log("fetching");
+      promiseArray.push(
+        fetch(`${baseUrl}${i}`)
+          .then((res) => {
+            if (!res.ok) {
+              return Promise.reject(`Error: ${res.status}`);
+            }
+            console.log("done");
+            return res.json();
+          })
+          // .then((pokemon) => pokemonArray.push(pokemon))
+          .catch((err) => {
+            console.error(err);
+          })
+      );
     }
-    setPokedata(pokemonArray);
+
+    Promise.all(promiseArray).then((data) => {
+      //set isLoaded to true
+      // debugger;
+      setPokedata(data);
+    });
+    // setPokedata(pokemonArray);
   }, []);
 
   return (

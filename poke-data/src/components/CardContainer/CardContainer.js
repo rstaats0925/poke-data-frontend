@@ -3,7 +3,7 @@ import React from "react";
 import Card from "../Card/Card";
 
 export default function CardContainer({ data }) {
-  data.sort((a, b) => a.id - b.id);
+  // data.sort((a, b) => a.id - b.id);
   const pokemonCards = data.map((pokemon) => {
     return (
       <li key={pokemon.id}>
