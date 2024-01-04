@@ -4,18 +4,19 @@ import Main from "../Main/Main";
 import CardContainer from "../CardContainer/CardContainer";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Modal from "../Modal/Modal";
 
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
   const [pokeData, setPokedata] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(true);
 
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
-    const pokemonArray = [];
     const promiseArray = [];
-    for (let i = 152; i < 251; i++) {
+    for (let i = 152; i < 161; i++) {
       console.log("fetching");
       promiseArray.push(
         fetch(`${baseUrl}${i}`)
@@ -26,7 +27,6 @@ function App() {
             console.log("done");
             return res.json();
           })
-          // .then((pokemon) => pokemonArray.push(pokemon))
           .catch((err) => {
             console.error(err);
           })
@@ -35,10 +35,8 @@ function App() {
 
     Promise.all(promiseArray).then((data) => {
       //set isLoaded to true
-      // debugger;
       setPokedata(data);
     });
-    // setPokedata(pokemonArray);
   }, []);
 
   return (
@@ -53,6 +51,7 @@ function App() {
         </Route>
       </Switch>
       <Footer />
+      {modalIsOpen === true && <Modal />}
     </div>
   );
 }
