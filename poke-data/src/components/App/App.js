@@ -11,20 +11,22 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [pokeData, setPokedata] = useState([]);
-  const [modalIsOpen, setModalIsOpen] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function handleCardClick() {
+    setModalIsOpen(true);
+  }
 
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
     for (let i = 152; i < 161; i++) {
-      console.log("fetching");
       promiseArray.push(
         fetch(`${baseUrl}${i}`)
           .then((res) => {
             if (!res.ok) {
               return Promise.reject(`Error: ${res.status}`);
             }
-            console.log("done");
             return res.json();
           })
           .catch((err) => {
@@ -47,7 +49,7 @@ function App() {
           <Main />
         </Route>
         <Route path="/cardContainer">
-          <CardContainer data={pokeData} />
+          <CardContainer data={pokeData} handleCardClick={handleCardClick} />
         </Route>
       </Switch>
       <Footer />

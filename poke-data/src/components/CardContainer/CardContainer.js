@@ -1,7 +1,7 @@
 import "./CardContainer.css";
 import Card from "../Card/Card";
 
-export default function CardContainer({ data }) {
+export default function CardContainer({ data, handleCardClick }) {
   const pokemonCards = data.map((pokemon) => {
     return (
       <li key={pokemon.id}>
@@ -10,6 +10,7 @@ export default function CardContainer({ data }) {
           name={pokemon.name}
           number={pokemon.id}
           sprites={pokemon.sprites}
+          handleCardClick={handleCardClick}
         />
       </li>
     );
