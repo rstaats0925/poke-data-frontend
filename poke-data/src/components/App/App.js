@@ -17,6 +17,26 @@ function App() {
     setModalIsOpen(true);
   }
 
+  function closeModal() {
+    setModalIsOpen(false);
+  }
+
+  useEffect(() => {
+    if (!modalIsOpen) return;
+
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscClose);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [modalIsOpen]);
+
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
