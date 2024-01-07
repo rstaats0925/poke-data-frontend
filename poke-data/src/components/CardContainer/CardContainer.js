@@ -6,6 +6,7 @@ export default function CardContainer({ data, handleCardClick }) {
     return (
       <li key={pokemon.id}>
         <Card
+          data={pokemon}
           className="card"
           name={pokemon.name}
           number={pokemon.id}
@@ -15,6 +16,7 @@ export default function CardContainer({ data, handleCardClick }) {
       </li>
     );
   });
+
   return (
     <main className="main">
       <div className="main__wrapper">

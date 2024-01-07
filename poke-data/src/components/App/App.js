@@ -12,9 +12,11 @@ import { useEffect, useState } from "react";
 function App() {
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({});
 
-  function handleCardClick() {
+  function handleCardClick(data) {
     setModalIsOpen(true);
+    setSelectedCard(data);
   }
 
   function closeModal() {
@@ -40,7 +42,7 @@ function App() {
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
-    for (let i = 152; i < 161; i++) {
+    for (let i = 152; i < 165; i++) {
       promiseArray.push(
         fetch(`${baseUrl}${i}`)
           .then((res) => {
@@ -73,7 +75,7 @@ function App() {
         </Route>
       </Switch>
       <Footer />
-      {modalIsOpen === true && <Modal />}
+      {modalIsOpen === true && <Modal data={selectedCard} />}
     </div>
   );
 }
