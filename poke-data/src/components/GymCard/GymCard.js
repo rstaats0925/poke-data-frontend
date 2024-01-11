@@ -11,7 +11,7 @@ function GymCard({ gym }) {
         <li className="gymCard__fact">Badge: {gym.badge}</li>
         <li className="gymCard__fact">
           Team:
-          <ul className="gymCard__pokemon-list">
+          <ul className="gymCard__team">
             {gym.team.map((pokemon) => (
               <li>{pokemon}</li>
             ))}

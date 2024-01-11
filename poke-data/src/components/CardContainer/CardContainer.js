@@ -18,10 +18,10 @@ export default function CardContainer({ data, handleCardClick }) {
   });
 
   return (
-    <main className="main">
+    <div className="main">
       <div className="main__wrapper">
         <ul className="main__grid">{pokemonCards}</ul>
       </div>
-    </main>
+    </div>
   );
 }

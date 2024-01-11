@@ -2,7 +2,40 @@
   outline: 1px solid #f00;
 }
 
-.gym-info__header {
-  background-color: #f00;
-  margin: 0;
+.main__gyms-wrapper {
+  width: 100%;
+}
+
+.main__gyms-grid {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(270px, 1fr));
+  row-gap: 20px;
+  justify-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 320px) {
+  .main__gyms-grid {
+    grid-template-columns: minmax(270px, 1fr);
+  }
+}
+
+@media (min-width: 620px) {
+  .main__gyms-grid {
+    grid-template-columns: repeat(2, minmax(270px, 1fr));
+  }
+}
+
+@media (min-width: 950px) {
+  .main__gyms-grid {
+    grid-template-columns: repeat(3, minmax(270px, 1fr));
+  }
+}
+
+@media (min-width: 1250px) {
+  .main__gyms-grid {
+    grid-template-columns: repeat(4, minmax(270px, 1fr));
+  }
 }
