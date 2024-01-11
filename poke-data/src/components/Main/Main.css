@@ -1,3 +1,8 @@
-.landing-page {
+.main {
   outline: 1px solid #f00;
+}
+
+.gym-info__header {
+  background-color: #f00;
+  margin: 0;
 }

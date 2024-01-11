@@ -1,0 +1,98 @@
+export const gymLeaders = [
+  {
+    number: 1,
+    name: "Falkner",
+    city: "Violet City",
+    specialty: "flying",
+    badge: "Zephyr",
+    team: ["Pidgey", "Pidgeotto"],
+    rewards: {
+      payout: 900,
+      machine: "TM31 - Mud Slap",
+    },
+  },
+  {
+    number: 2,
+    name: "Bugsy",
+    city: "Azalea Town",
+    specialty: "Bug",
+    badge: "Insect",
+    team: ["Metapod", "Kakuna", "Scyther"],
+    rewards: {
+      payout: 1600,
+      machine: "TM49 - Fury Cutter",
+    },
+  },
+  {
+    number: 3,
+    name: "Whitney",
+    city: "Goldenrod City",
+    specialty: "Normal",
+    badge: "Plain",
+    team: ["Clefairy", "Miltank"],
+    rewards: {
+      payout: 2000,
+      machine: "TM45 - Attract",
+    },
+  },
+  {
+    number: 4,
+    name: "Morty",
+    city: "Ecruteak City",
+    specialty: "Ghost",
+    badge: "Fog",
+    team: ["Gastly", "Haunter", "Haunter", "Gengar"],
+    rewards: {
+      payout: 2300,
+      machine: "TM34 - Shadow Ball",
+    },
+  },
+  {
+    number: 5,
+    name: "Chuck",
+    city: "Cianwood City",
+    specialty: "Fighting",
+    badge: "Storm",
+    team: ["Primape", "Poliwrath"],
+    rewards: {
+      payout: 3000,
+      machine: "TM01 - Dynamic Punch",
+    },
+  },
+  {
+    number: 6,
+    name: "Jasmine",
+    city: "Olivine City",
+    specialty: "Steel",
+    badge: "Mineral",
+    team: ["Magnemite", "Magnemite", "Steelix"],
+    rewards: {
+      payout: 3500,
+      machine: "TM23 - Iron Tail",
+    },
+  },
+  {
+    number: 7,
+    name: "Pryce",
+    city: "Mahogany Town",
+    specialty: "Ice",
+    badge: "Glacier",
+    team: ["Seel", "Dewgong", "Piloswine"],
+    rewards: {
+      payout: 3100,
+      machine: "TM16 - Icy Wind",
+    },
+  },
+  {
+    number: 8,
+    name: "Clair",
+    city: "Blackthorn City",
+    specialty: "Dragon",
+    badge: "Rising",
+    team: ["Dragonair", "Dragonair", "Dragonair", "Kingdra"],
+    rewards: {
+      payout: 4000,
+      machine: "TM24 - Dragons Breath",
+    },
+  },
+];
