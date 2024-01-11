@@ -1,9 +1,9 @@
 export const gymLeaders = [
   {
     number: 1,
-    name: "Falkner",
+    leader: "Falkner",
     city: "Violet City",
-    specialty: "flying",
+    specialty: "Flying",
     badge: "Zephyr",
     team: ["Pidgey", "Pidgeotto"],
     rewards: {
@@ -13,7 +13,7 @@ export const gymLeaders = [
   },
   {
     number: 2,
-    name: "Bugsy",
+    leader: "Bugsy",
     city: "Azalea Town",
     specialty: "Bug",
     badge: "Insect",
@@ -25,7 +25,7 @@ export const gymLeaders = [
   },
   {
     number: 3,
-    name: "Whitney",
+    leader: "Whitney",
     city: "Goldenrod City",
     specialty: "Normal",
     badge: "Plain",
@@ -37,7 +37,7 @@ export const gymLeaders = [
   },
   {
     number: 4,
-    name: "Morty",
+    leader: "Morty",
     city: "Ecruteak City",
     specialty: "Ghost",
     badge: "Fog",
@@ -49,7 +49,7 @@ export const gymLeaders = [
   },
   {
     number: 5,
-    name: "Chuck",
+    leader: "Chuck",
     city: "Cianwood City",
     specialty: "Fighting",
     badge: "Storm",
@@ -61,7 +61,7 @@ export const gymLeaders = [
   },
   {
     number: 6,
-    name: "Jasmine",
+    leader: "Jasmine",
     city: "Olivine City",
     specialty: "Steel",
     badge: "Mineral",
@@ -73,7 +73,7 @@ export const gymLeaders = [
   },
   {
     number: 7,
-    name: "Pryce",
+    leader: "Pryce",
     city: "Mahogany Town",
     specialty: "Ice",
     badge: "Glacier",
@@ -85,7 +85,7 @@ export const gymLeaders = [
   },
   {
     number: 8,
-    name: "Clair",
+    leader: "Clair",
     city: "Blackthorn City",
     specialty: "Dragon",
     badge: "Rising",

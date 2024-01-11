@@ -10,8 +10,12 @@ function GymCard({ gym }) {
         <li className="gymCard__fact">City: {gym.city}</li>
         <li className="gymCard__fact">Badge: {gym.badge}</li>
         <li className="gymCard__fact">
-          Pokemon:
-          <ul className="gymCard__pokemon-list">{gym.team}</ul>
+          Team:
+          <ul className="gymCard__pokemon-list">
+            {gym.team.map((pokemon) => (
+              <li>{pokemon}</li>
+            ))}
+          </ul>
         </li>
         <li className="gymCard__fact">
           Rewards:
