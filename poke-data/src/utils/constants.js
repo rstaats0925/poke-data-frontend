@@ -5,7 +5,7 @@ export const gymLeaders = [
     city: "Violet City",
     specialty: "Flying",
     badge: "Zephyr",
-    team: ["Pidgey", "Pidgeotto"],
+    team: ["pidgey", "pidgeotto"],
     rewards: {
       payout: 900,
       machine: "TM31 - Mud Slap",
@@ -17,7 +17,7 @@ export const gymLeaders = [
     city: "Azalea Town",
     specialty: "Bug",
     badge: "Insect",
-    team: ["Metapod", "Kakuna", "Scyther"],
+    team: ["metapod", "kakuna", "scyther"],
     rewards: {
       payout: 1600,
       machine: "TM49 - Fury Cutter",
@@ -29,7 +29,7 @@ export const gymLeaders = [
     city: "Goldenrod City",
     specialty: "Normal",
     badge: "Plain",
-    team: ["Clefairy", "Miltank"],
+    team: ["clefairy", "miltank"],
     rewards: {
       payout: 2000,
       machine: "TM45 - Attract",
@@ -41,7 +41,7 @@ export const gymLeaders = [
     city: "Ecruteak City",
     specialty: "Ghost",
     badge: "Fog",
-    team: ["Gastly", "Haunter", "Haunter", "Gengar"],
+    team: ["gastly", "haunter", "haunter", "gengar"],
     rewards: {
       payout: 2300,
       machine: "TM34 - Shadow Ball",
@@ -53,7 +53,7 @@ export const gymLeaders = [
     city: "Cianwood City",
     specialty: "Fighting",
     badge: "Storm",
-    team: ["Primape", "Poliwrath"],
+    team: ["primape", "poliwrath"],
     rewards: {
       payout: 3000,
       machine: "TM01 - Dynamic Punch",
@@ -65,7 +65,7 @@ export const gymLeaders = [
     city: "Olivine City",
     specialty: "Steel",
     badge: "Mineral",
-    team: ["Magnemite", "Magnemite", "Steelix"],
+    team: ["magnemite", "magnemite", "steelix"],
     rewards: {
       payout: 3500,
       machine: "TM23 - Iron Tail",
@@ -77,7 +77,7 @@ export const gymLeaders = [
     city: "Mahogany Town",
     specialty: "Ice",
     badge: "Glacier",
-    team: ["Seel", "Dewgong", "Piloswine"],
+    team: ["seel", "dewgong", "piloswine"],
     rewards: {
       payout: 3100,
       machine: "TM16 - Icy Wind",
@@ -89,7 +89,7 @@ export const gymLeaders = [
     city: "Blackthorn City",
     specialty: "Dragon",
     badge: "Rising",
-    team: ["Dragonair", "Dragonair", "Dragonair", "Kingdra"],
+    team: ["dragonair", "dragonair", "dragonair", "kingdra"],
     rewards: {
       payout: 4000,
       machine: "TM24 - Dragons Breath",

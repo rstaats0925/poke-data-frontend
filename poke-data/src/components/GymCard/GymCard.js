@@ -1,4 +1,5 @@
 import "./GymCard.css";
+import v from "voca";
 
 function GymCard({ gym }) {
   return (
@@ -13,7 +14,7 @@ function GymCard({ gym }) {
           Team:
           <ul className="gymCard__team">
             {gym.team.map((pokemon) => (
-              <li>{pokemon}</li>
+              <li>{v.capitalize(pokemon)}</li>
             ))}
           </ul>
         </li>
