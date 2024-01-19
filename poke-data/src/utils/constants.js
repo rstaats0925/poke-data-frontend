@@ -53,7 +53,7 @@ export const gymLeaders = [
     city: "Cianwood City",
     specialty: "Fighting",
     badge: "Storm",
-    team: ["primape", "poliwrath"],
+    team: ["primeape", "poliwrath"],
     rewards: {
       payout: 3000,
       machine: "TM01 - Dynamic Punch",

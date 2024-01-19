@@ -5,11 +5,16 @@ import CardContainer from "../CardContainer/CardContainer";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
-
+import { gymLeaders } from "../../utils/constants";
+import _ from "lodash";
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
+  let gymPokemon = [];
+  gymLeaders.forEach(
+    (gym) => (gymPokemon = gymPokemon.concat(_.uniq(gym.team)))
+  );
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState({});
@@ -42,9 +47,10 @@ function App() {
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
-    for (let i = 152; i < 165; i++) {
+    let id = 1;
+    gymPokemon.forEach((pokemon) => {
       promiseArray.push(
-        fetch(`${baseUrl}${i}`)
+        fetch(`${baseUrl}${pokemon}`)
           .then((res) => {
             if (!res.ok) {
               return Promise.reject(`Error: ${res.status}`);
@@ -55,7 +61,7 @@ function App() {
             console.error(err);
           })
       );
-    }
+    });
 
     Promise.all(promiseArray).then((data) => {
       //set isLoaded to true
