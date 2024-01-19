@@ -5,7 +5,22 @@ export const gymLeaders = [
     city: "Violet City",
     specialty: "Flying",
     badge: "Zephyr",
-    team: ["pidgey", "pidgeotto"],
+    team: [
+      {
+        id: 1,
+        name: "pidgey",
+        level: 7,
+        moves: ["tackle", "mud-slap"],
+        types: ["normal", "flying"],
+      },
+      {
+        id: 2,
+        name: "pidgeotto",
+        level: 9,
+        moves: ["tackle", "mud-slap", "gust"],
+        types: ["normal", "flying"],
+      },
+    ],
     rewards: {
       payout: 900,
       machine: "TM31 - Mud Slap",
@@ -17,7 +32,29 @@ export const gymLeaders = [
     city: "Azalea Town",
     specialty: "Bug",
     badge: "Insect",
-    team: ["metapod", "kakuna", "scyther"],
+    team: [
+      {
+        id: 3,
+        name: "metapod",
+        level: 14,
+        moves: ["tackle", "string shot", "harden"],
+        types: ["bug"],
+      },
+      {
+        id: 4,
+        name: "kakuna",
+        level: 14,
+        moves: ["poison sting", "string shot", "harden"],
+        types: ["bug", "poison"],
+      },
+      {
+        id: 5,
+        name: "scyther",
+        level: 16,
+        moves: ["quick attack", "leer", "fury cutter"],
+        types: ["bug", "flying"],
+      },
+    ],
     rewards: {
       payout: 1600,
       machine: "TM49 - Fury Cutter",
@@ -29,7 +66,22 @@ export const gymLeaders = [
     city: "Goldenrod City",
     specialty: "Normal",
     badge: "Plain",
-    team: ["clefairy", "miltank"],
+    team: [
+      {
+        id: 6,
+        name: "clefairy",
+        level: 18,
+        moves: ["doubleslap", "mimic", "encore", "metronome"],
+        types: ["normal"],
+      },
+      {
+        id: 7,
+        name: "miltank",
+        level: 20,
+        moves: ["rollout", "attract", "stomp", "milk drink"],
+        types: ["normal"],
+      },
+    ],
     rewards: {
       payout: 2000,
       machine: "TM45 - Attract",
@@ -41,7 +93,35 @@ export const gymLeaders = [
     city: "Ecruteak City",
     specialty: "Ghost",
     badge: "Fog",
-    team: ["gastly", "haunter", "haunter", "gengar"],
+    team: [
+      {
+        id: 8,
+        name: "gastly",
+        level: 21,
+        moves: ["lick", "spite", "mean look", "curse"],
+        types: ["ghost", "poison"],
+      },
+      {
+        id: 9,
+        name: "haunter",
+        level: 21,
+        moves: ["hypnosis", "mimic", "curse", "night shade"],
+        types: ["ghost", "poison"],
+      },
+      {
+        id: 10,
+        name: "haunter",
+        level: 23,
+        moves: ["spite", "mean look", "mimic", "night shade"],
+        types: ["ghost", "poison"],
+      },
+      {
+        id: 11,
+        name: "gengar",
+        moves: ["hypnosis", "shadow ball", "mean look", "dream eater"],
+        types: ["ghost", "poison"],
+      },
+    ],
     rewards: {
       payout: 2300,
       machine: "TM34 - Shadow Ball",
