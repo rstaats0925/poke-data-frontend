@@ -118,6 +118,7 @@ export const gymLeaders = [
       {
         id: 11,
         name: "gengar",
+        level: 25,
         moves: ["hypnosis", "shadow ball", "mean look", "dream eater"],
         types: ["ghost", "poison"],
       },
@@ -133,7 +134,22 @@ export const gymLeaders = [
     city: "Cianwood City",
     specialty: "Fighting",
     badge: "Storm",
-    team: ["primeape", "poliwrath"],
+    team: [
+      {
+        id: 12,
+        name: "primeape",
+        level: 27,
+        moves: ["leer", "rage", "karate chop", "fury swipes"],
+        types: ["fight"],
+      },
+      {
+        id: 13,
+        name: "poliwrath",
+        level: 30,
+        moves: ["hypnosis", "mind reader", "surf", "dynamicpunch"],
+        types: ["fight", "water"],
+      },
+    ],
     rewards: {
       payout: 3000,
       machine: "TM01 - Dynamic Punch",
@@ -145,7 +161,29 @@ export const gymLeaders = [
     city: "Olivine City",
     specialty: "Steel",
     badge: "Mineral",
-    team: ["magnemite", "magnemite", "steelix"],
+    team: [
+      {
+        id: 14,
+        name: "magnemite",
+        level: 30,
+        moves: ["thunderbolt", "supersonic", "sonicboom", "thunder wave"],
+        types: ["electric", "steel"],
+      },
+      {
+        id: 15,
+        name: "magnemite",
+        level: 30,
+        moves: ["thunderbolt", "supersonic", "sonicboom", "thunder wave"],
+        types: ["electric", "steel"],
+      },
+      {
+        id: 16,
+        name: "steelix",
+        level: 35,
+        moves: ["screech", "sunny day", "rock throw", "iron tail"],
+        types: ["ground", "steel"],
+      },
+    ],
     rewards: {
       payout: 3500,
       machine: "TM23 - Iron Tail",
@@ -157,7 +195,29 @@ export const gymLeaders = [
     city: "Mahogany Town",
     specialty: "Ice",
     badge: "Glacier",
-    team: ["seel", "dewgong", "piloswine"],
+    team: [
+      {
+        id: 17,
+        name: "seel",
+        level: 27,
+        moves: ["headbutt", "icy wind", "aurora beam", "rest"],
+        types: ["water"],
+      },
+      {
+        id: 18,
+        name: "dewgong",
+        level: 29,
+        moves: ["headbutt", "icy wind", "aurora beam", "rest"],
+        types: ["water", "ice"],
+      },
+      {
+        id: 19,
+        name: "piloswine",
+        level: 31,
+        moves: ["icy wind", "fury attack", "mist", "blizzard"],
+        types: ["ice", "ground"],
+      },
+    ],
     rewards: {
       payout: 3100,
       machine: "TM16 - Icy Wind",
@@ -169,7 +229,36 @@ export const gymLeaders = [
     city: "Blackthorn City",
     specialty: "Dragon",
     badge: "Rising",
-    team: ["dragonair", "dragonair", "dragonair", "kingdra"],
+    team: [
+      {
+        id: 20,
+        name: "dragonair",
+        level: 37,
+        moves: ["thunder wave", "surf", "slam", "dragonbreath"],
+        types: ["dragon"],
+      },
+      {
+        id: 21,
+        name: "dragonair",
+        level: 37,
+        moves: ["thunder wave", "thunderbolt", "slam", "dragonbreath"],
+        types: ["dragon"],
+      },
+      {
+        id: 22,
+        name: "dragonair",
+        level: 37,
+        moves: ["thunder wave", "ice beam", "slam", "dragonbreath"],
+        types: ["dragon"],
+      },
+      {
+        id: 23,
+        name: "kingdra",
+        level: 40,
+        moves: ["smokescreen", "surf", "hyper beam", "dragonbreath"],
+        types: ["water", "dragon"],
+      },
+    ],
     rewards: {
       payout: 4000,
       machine: "TM24 - Dragons Breath",
