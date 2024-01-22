@@ -1,10 +1,10 @@
 import "./Main.css";
 import { React } from "react";
 import GymCard from "../GymCard/GymCard";
-import { gymLeaders } from "../../utils/constants";
+import { gyms } from "../../utils/constants";
 
 function Main() {
-  const gymCards = gymLeaders.map((cardData) => {
+  const gymCards = gyms.map((cardData) => {
     return (
       <li key={cardData.number}>
         <GymCard gym={cardData} />
