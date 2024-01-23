@@ -4,6 +4,7 @@
 
 .main__wrapper {
   width: 100%;
+  background-image: linear-gradient(to bottom right, #ffd700, #c0c0c0 70%);
 }
 
 .main__grid {

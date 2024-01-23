@@ -283,4 +283,3 @@ export const gymPokemon = [
     types: ["water", "dragon"],
   },
 ];
-t;
