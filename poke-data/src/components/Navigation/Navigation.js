@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 function Navigation({ onClose }) {
   const closeMenu = () => {
-    //use closeNav function defined in app.js
     onClose();
   };
 
