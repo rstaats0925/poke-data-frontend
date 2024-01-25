@@ -1,11 +1,13 @@
 .Header {
   outline: 1px solid #f00;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   width: 100%;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  row-gap: 20px;
+  /* height: 400px;
+  z-index: 99; */
+  /* display: grid; */
+  /* justify-items: center; */
+  /* align-items: center; */
+  /* row-gap: 20px; */
 }
 
 .Header__logo {

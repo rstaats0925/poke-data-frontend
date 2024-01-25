@@ -5,6 +5,7 @@ import CardContainer from "../CardContainer/CardContainer";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
+import Navigation from "../Navigation/Navigation";
 import { gyms } from "../../utils/constants";
 import _ from "lodash";
 import { Route, Switch } from "react-router-dom";
@@ -15,6 +16,7 @@ function App() {
   gyms.forEach((gym) => (resources = resources.concat(gym.team)));
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [navbarIsOpen, setNavbarIsOpen] = useState(true);
   const [selectedCard, setSelectedCard] = useState({});
 
   function handleCardClick(data) {
@@ -24,6 +26,10 @@ function App() {
 
   function closeModal() {
     setModalIsOpen(false);
+  }
+
+  function closeNav() {
+    setNavbarIsOpen(false);
   }
 
   useEffect(() => {
@@ -93,6 +99,7 @@ function App() {
       </Switch>
       <Footer />
       {modalIsOpen === true && <Modal data={selectedCard} />}
+      {navbarIsOpen && <Navigation onClose={closeNav} />}
     </div>
   );
 }
