@@ -13,28 +13,5 @@
   height: 25px;
   width: 25px;
   border: none;
-  /* z-index: 999; */
+  z-index: 999;
 }
-
-/* .header__logo {
-  margin: 0;
-  font-family: "Pokemon";
-  font-size: 48px;
-  color: #000;
-  text-decoration: none;
-} */
-
-/* .Header__explore-link {
-  text-decoration: none;
-  color: black;
-  font-family: Pokemon;
-  font-size: 32px;
-} */
-
-/* @media (min-width: 670px) {
-  .Header {
-    grid-template-columns: 5fr repeat(2, 1fr);
-    justify-items: start;
-    column-gap: 10px;
-  }
-} */
