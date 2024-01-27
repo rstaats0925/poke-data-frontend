@@ -99,7 +99,6 @@ function App() {
       </Switch>
       <Footer />
       {modalIsOpen === true && <Modal data={selectedCard} />}
-      {navbarIsOpen && <Navigation onClose={closeNav} />}
     </div>
   );
 }

@@ -5,15 +5,10 @@ import Navigation from "../Navigation/Navigation";
 
 function Header() {
   return (
-    <header className="Header">
-      {/* <Navigation /> */}
-      {/* <Link className="Header__logo" to="/">
-        <h1 className="Header__logo">PokeData</h1>
-      </Link> */}
-      {/* <Link className="Header__explore-link" to="/cardContainer">
-        Explore Pokemon
-      </Link> */}
-      {/* <button className="Header__Go-button">Go!</button> */}
+    <header className="header">
+      <div className="header__logo">PokeData</div>
+      <Navigation />
+      <button className="header__menu-btn" type="button"></button>
     </header>
   );
 }

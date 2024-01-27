@@ -1,43 +1,40 @@
-.Header {
+.header {
   outline: 1px solid #f00;
-  /* padding: 10px 0; */
-  width: 100%;
-  /* height: 400px;
-  z-index: 99; */
-  /* display: grid; */
-  /* justify-items: center; */
-  /* align-items: center; */
-  /* row-gap: 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
-.Header__logo {
+.header__menu-btn {
+  background-image: url("../../images/menu-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25px;
+  width: 25px;
+  border: none;
+  z-index: 999;
+}
+
+/* .header__logo {
   margin: 0;
   font-family: "Pokemon";
   font-size: 48px;
   color: #000;
   text-decoration: none;
-}
+} */
 
-.Header__explore-link {
+/* .Header__explore-link {
   text-decoration: none;
   color: black;
   font-family: Pokemon;
   font-size: 32px;
-}
+} */
 
-.Header__dropdown {
-  font-family: "Pokemon";
-  font-size: 32px;
-  line-height: 2.1;
-  line-height: 1;
-  appearance: none;
-  border: none;
-}
-
-@media (min-width: 670px) {
+/* @media (min-width: 670px) {
   .Header {
     grid-template-columns: 5fr repeat(2, 1fr);
     justify-items: start;
     column-gap: 10px;
   }
-}
+} */
