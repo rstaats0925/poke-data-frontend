@@ -1,10 +1,18 @@
 import "./Navigation.css";
 // import { Link } from "react-router-dom";
 
-function Navigation() {
+function Navigation({ onClose, isClosed }) {
+  const closeNav = () => {
+    onClose();
+  };
+
   return (
-    <nav className="navbar">
-      <button className="navbar__close-btn" type="button"></button>
+    <nav className={`${isClosed ? "navbar navbar_closed" : "navbar"}`}>
+      <button
+        className="navbar__close-btn"
+        type="button"
+        onClick={() => closeNav()}
+      ></button>
       <ul className="navbar__main">
         <li key="home" className="navbar__item">
           <a className="navbar__link" href="#">

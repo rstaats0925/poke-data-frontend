@@ -16,7 +16,7 @@ function App() {
   gyms.forEach((gym) => (resources = resources.concat(gym.team)));
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [navbarIsOpen, setNavbarIsOpen] = useState(true);
+  const [navIsClosed, setNavIsClosed] = useState(false);
   const [selectedCard, setSelectedCard] = useState({});
 
   function handleCardClick(data) {
@@ -28,8 +28,12 @@ function App() {
     setModalIsOpen(false);
   }
 
+  function openNav() {
+    setNavIsClosed(false);
+  }
+
   function closeNav() {
-    setNavbarIsOpen(false);
+    setNavIsClosed(true);
   }
 
   useEffect(() => {
@@ -88,7 +92,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header onClose={closeNav} onOpen={openNav} isClosed={navIsClosed} />
       <Switch>
         <Route exact path="/">
           <Main />
