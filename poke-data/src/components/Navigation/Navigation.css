@@ -1,11 +1,24 @@
+.navbar__close-btn {
+  background-image: url("../../images/close-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  margin-left: 80%;
+  margin-top: 10%;
+  width: 30px;
+  height: 30px;
+}
+
 .navbar {
   /* outline: 1px solid red; */
   background-color: white;
   position: fixed;
   inset: 0 0 0 30%;
-  /* transform: translate(100%); */
 }
 
+.navbar_closed {
+  transform: translateX(100%);
+}
 .navbar__main {
   padding-left: 20px;
   display: flex;

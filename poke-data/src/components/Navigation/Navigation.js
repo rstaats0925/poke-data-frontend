@@ -4,6 +4,7 @@ import "./Navigation.css";
 function Navigation() {
   return (
     <nav className="navbar">
+      <button className="navbar__close-btn" type="button"></button>
       <ul className="navbar__main">
         <li key="home" className="navbar__item">
           <a className="navbar__link" href="#">
