@@ -7,6 +7,7 @@
   margin-top: 10%;
   width: 30px;
   height: 30px;
+  padding: 0;
 }
 
 .navbar {
@@ -20,7 +21,7 @@
   transform: translateX(100%);
 }
 .navbar__main {
-  padding-left: 20px;
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -30,4 +31,29 @@
 
 .navbar__link {
   text-decoration: none;
+}
+
+@media (min-width: 450px) {
+  .navbar {
+    left: 50%;
+  }
+}
+
+@media (min-width: 550px) {
+  .navbar {
+    position: static;
+  }
+
+  .navbar__main {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .navbar__close-btn {
+    display: none;
+  }
+
+  .navbar_closed {
+    transform: translateX(0);
+  }
 }

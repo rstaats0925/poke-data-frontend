@@ -16,7 +16,7 @@ function App() {
   gyms.forEach((gym) => (resources = resources.concat(gym.team)));
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [navIsClosed, setNavIsClosed] = useState(false);
+  const [navIsClosed, setNavIsClosed] = useState(true);
   const [selectedCard, setSelectedCard] = useState({});
 
   function handleCardClick(data) {
