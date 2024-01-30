@@ -5,13 +5,15 @@ import CardContainer from "../CardContainer/CardContainer";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
-import { gyms } from "../../utils/constants";
+import { gyms, gymPokemon } from "../../utils/constants";
 import { Route, Switch } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import _ from "lodash";
 
 function App() {
-  let resources = [];
-  gyms.forEach((gym) => (resources = resources.concat(gym.team)));
+  const endPoints = useMemo(() => {
+    return gyms.map((gym) => gym.team).flat();
+  }, []);
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [navIsClosed, setNavIsClosed] = useState(true);
@@ -54,7 +56,7 @@ function App() {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
 
-    resources.forEach((r) => {
+    endPoints.forEach((r) => {
       promiseArray.push(
         fetch(`${baseUrl}${r}`)
           .then((res) => {
@@ -70,11 +72,13 @@ function App() {
     });
 
     Promise.all(promiseArray).then((data) => {
-      //set isLoaded to true
-      //maybe merge data here?
-      setPokedata(data);
+      const completeData = data.map((element, index) => {
+        return _.merge({}, element, gymPokemon[index]);
+      });
+
+      setPokedata(completeData);
     });
-  }, []);
+  }, [endPoints]);
 
   return (
     <div className="App">

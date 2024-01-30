@@ -1,13 +1,8 @@
 import "./CardContainer.css";
 import Card from "../Card/Card";
-import _ from "lodash";
-import { gymPokemon } from "../../utils/constants";
 
 export default function CardContainer({ data, handleCardClick }) {
-  const completeData = data.map((element, index) => {
-    return _.merge({}, element, gymPokemon[index]);
-  });
-  const pokemonCards = completeData.map((cardData) => {
+  const pokemonCards = data.map((cardData) => {
     return (
       <li key={cardData.key}>
         <Card
