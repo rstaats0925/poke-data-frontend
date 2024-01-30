@@ -12,7 +12,9 @@ function Navigation({ onClose, isClosed }) {
         className="navbar__close-btn"
         type="button"
         onClick={() => closeNav()}
-      ></button>
+      >
+        X
+      </button>
       <ul className="navbar__main">
         <li key="home" className="navbar__item">
           <Link className="navbar__link" to="/" onClick={() => closeNav()}>

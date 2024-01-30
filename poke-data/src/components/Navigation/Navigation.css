@@ -1,5 +1,5 @@
 .navbar__close-btn {
-  background-image: url("../../images/close-icon.svg");
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   border: none;
@@ -12,7 +12,8 @@
 
 .navbar {
   /* outline: 1px solid red; */
-  background-color: white;
+  /* background-color: white; */
+  background-image: linear-gradient(to bottom right, #ffd700, #c0c0c0 70%);
   position: fixed;
   inset: 0 0 0 30%;
   transition: transform 0.8s ease;
@@ -44,6 +45,7 @@
   .navbar {
     position: static;
     transition: none;
+    background-image: none;
   }
 
   .navbar__main {
