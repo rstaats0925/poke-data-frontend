@@ -10,7 +10,20 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal__close-btn {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/close-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
 .modal__content {
+  position: relative;
   background-color: #fff;
   box-sizing: border-box;
   max-width: 496px;
@@ -41,19 +54,6 @@
 .modal__attack {
   margin: 5px 0;
 }
-
-/* @media (min-width: 400px) {
-  .modal__data {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
-
-  .modal__attacks {
-    margin-bottom: 30px;
-    font-size: 24px;
-  }
-} */
 
 @media (min-width: 480px) {
   .modal__content {

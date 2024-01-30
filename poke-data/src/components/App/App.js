@@ -5,9 +5,7 @@ import CardContainer from "../CardContainer/CardContainer";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
-import Navigation from "../Navigation/Navigation";
 import { gyms } from "../../utils/constants";
-import _ from "lodash";
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -55,19 +53,7 @@ function App() {
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
-    // gymLeaders.forEach((gym) => {
-    //   gym.team.forEach((member) => {
-    //     promiseArray.push(
-    //       fetch(`${baseUrl}${member.name}`)
-    //         .then((res) => {
-    //           if (!res.ok) {
-    //             return Promise.reject(`Error: ${res.status}`);
-    //           }
-    //         })
-    //         .catch((err) => console.error(err))
-    //     );
-    //   });
-    // });
+
     resources.forEach((r) => {
       promiseArray.push(
         fetch(`${baseUrl}${r}`)
@@ -102,7 +88,9 @@ function App() {
         </Route>
       </Switch>
       <Footer />
-      {modalIsOpen === true && <Modal data={selectedCard} />}
+      {modalIsOpen === true && (
+        <Modal data={selectedCard} onClose={closeModal} />
+      )}
     </div>
   );
 }

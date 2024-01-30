@@ -1,6 +1,6 @@
 import "./Modal.css";
 
-export default function Modal({ data }) {
+export default function Modal({ data, onClose }) {
   const imageUrl = data.sprites.other.dream_world.front_default;
   const attacks = data.attacks.map((a) => (
     <li>
@@ -8,9 +8,18 @@ export default function Modal({ data }) {
     </li>
   ));
 
+  const close = () => {
+    onClose();
+  };
+
   return (
     <div className="modal">
       <div className="modal__content">
+        <button
+          className="modal__close-btn"
+          type="button"
+          onClick={() => close()}
+        ></button>
         <div className="modal__intro">
           <img className="modal__image" src={imageUrl} alt={data.name}></img>
           <h2 className="modal__name">{data.name.toUpperCase()}</h2>
@@ -33,5 +42,4 @@ export default function Modal({ data }) {
 }
 
 // tasks
-// modal is not responsive
 // cards need background
