@@ -2,12 +2,12 @@
   outline: 1px solid black;
   border-radius: 25px;
   width: 270px;
-  height: 250px;
-  /* background-color: green; */
+  height: 270px;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .gymCard__header {
-  /* background-color: green; */
   margin: 0;
 }
 

@@ -11,7 +11,7 @@ function GymCard({ gym }) {
           Leader: {gym.leader}
         </li>
         <li className="gymCard__fact" key={gym.specialty}>
-          Specialy: {gym.specialty}
+          Specialty: {gym.specialty}
         </li>
         <li className="gymCard__fact" key={gym.city}>
           City: {gym.city}
