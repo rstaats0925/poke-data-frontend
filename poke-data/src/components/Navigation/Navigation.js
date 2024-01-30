@@ -1,5 +1,5 @@
 import "./Navigation.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navigation({ onClose, isClosed }) {
   const closeNav = () => {
@@ -15,19 +15,23 @@ function Navigation({ onClose, isClosed }) {
       ></button>
       <ul className="navbar__main">
         <li key="home" className="navbar__item">
-          <a className="navbar__link" href="#">
+          <Link className="navbar__link" to="/" onClick={() => closeNav()}>
             Gyms
-          </a>
+          </Link>
         </li>
         <li key="pokemon" className="navbar__item">
-          <a className="navbar__link" href="#">
+          <Link
+            className="navbar__link"
+            to="/cardContainer"
+            onClick={() => closeNav()}
+          >
             Pokemon
-          </a>
+          </Link>
         </li>
         <li key="about" className="navbar__item">
-          <a className="navbar__link" href="#">
+          <Link className="navbar__link" to="/about">
             About
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

@@ -1,5 +1,6 @@
 .main {
   width: 100%;
+  margin-top: 50px;
 }
 
 .main__wrapper {
@@ -10,10 +11,12 @@
 .main__grid {
   outline: 1px solid #f00;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 25px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   justify-items: center;
   list-style-type: none;
+  margin-top: 50px;
+  box-sizing: border-box;
 }

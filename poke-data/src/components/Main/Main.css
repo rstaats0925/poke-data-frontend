@@ -4,16 +4,19 @@
 
 .main__gyms-wrapper {
   width: 100%;
+  background-image: linear-gradient(to bottom right, #ffd700, #c0c0c0 70%);
 }
 
 .main__gyms-grid {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3, minmax(270px, 1fr));
-  row-gap: 20px;
+  grid-template-columns: repeat(auto-fill minmax(270px, 1fr));
+  gap: 20px;
   justify-items: center;
+  align-items: center;
   width: 100%;
-  padding: 0;
+  padding: 25px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 320px) {

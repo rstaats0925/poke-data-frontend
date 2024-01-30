@@ -1,12 +1,13 @@
 .gymCard {
-  /* outline: 1px solid red; */
-  width: 300px;
+  outline: 1px solid black;
+  border-radius: 25px;
+  width: 270px;
   height: 250px;
-  background-color: green;
+  /* background-color: green; */
 }
 
 .gymCard__header {
-  background-color: green;
+  /* background-color: green; */
   margin: 0;
 }
 
