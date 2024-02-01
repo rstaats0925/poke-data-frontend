@@ -8,6 +8,7 @@
   width: 30px;
   height: 30px;
   padding: 0;
+  font-size: 24px;
 }
 
 .navbar {
@@ -36,7 +37,7 @@
   color: rgba(165, 165, 35);
   color: #000;
   font-size: 24px;
-  transition: color 0.2s ease-out, color 0.2s ease-out;
+  transition: color 0.1s ease-out, color 0.2s ease-out;
 }
 
 .navbar__link:hover {
@@ -49,7 +50,7 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .navbar {
     position: static;
     transition: none;

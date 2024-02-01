@@ -1,27 +1,17 @@
 .about {
-  margin-top: 100px;
+  margin-top: 80px;
   box-sizing: border-box;
   padding: 0 25px;
-  max-width: 1000px;
   line-height: 1.5;
+  background-image: linear-gradient(to bottom right, #ffd700, #c0c0c0 70%);
 }
-
-/* .about__paragraph {
-  margin: 0 auto;
-} */
 
 .about__header {
   text-align: center;
 }
 
-/* .about__intro {
-  outline: 1px solid red;
+@media (min-width: 600px) {
+  .about__paragraph {
+    font-size: 18px;
+  }
 }
-
-.about__gyms {
-  outline: 1px solid blue;
-}
-
-.about__pokemon {
-  outline: 1px solid green;
-} */
