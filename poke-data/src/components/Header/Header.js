@@ -18,7 +18,11 @@ function Header({ onClose, onOpen, isClosed }) {
         className="header__menu-btn"
         type="button"
         onClick={() => openMobileMenu()}
-      ></button>
+      >
+        <div className="menu-btn__bar"></div>
+        <div className="menu-btn__bar"></div>
+        <div className="menu-btn__bar"></div>
+      </button>
     </header>
   );
 }

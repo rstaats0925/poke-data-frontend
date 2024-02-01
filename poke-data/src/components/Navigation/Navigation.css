@@ -11,8 +11,6 @@
 }
 
 .navbar {
-  /* outline: 1px solid red; */
-  /* background-color: white; */
   background-image: linear-gradient(to bottom right, #ffd700, #c0c0c0 70%);
   position: fixed;
   inset: 0 0 0 30%;
@@ -33,6 +31,14 @@
 
 .navbar__link {
   text-decoration: none;
+  color: rgba(165, 165, 35);
+  font-size: 24px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.navbar__link:hover {
+  background-color: #c0c0c0;
+  color: #ffd700;
 }
 
 @media (min-width: 450px) {

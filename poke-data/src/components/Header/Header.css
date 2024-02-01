@@ -11,7 +11,7 @@
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  background-color: white;
+  background-color: #c0c0c0;
 }
 
 .header__logo-link {
@@ -24,12 +24,24 @@
 }
 
 .header__menu-btn {
-  background-image: url("../../images/menu-icon.svg");
+  /* background-image: url("../../images/menu-icon.svg"); */
+  background-color: #c0c0c0;
   background-repeat: no-repeat;
   background-size: contain;
   height: 40px;
   width: 40px;
   border: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn__bar {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
 }
 
 @media (min-width: 500px) {
