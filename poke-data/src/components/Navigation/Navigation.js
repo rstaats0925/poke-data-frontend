@@ -17,7 +17,7 @@ function Navigation({ onClose, isClosed }) {
       </button>
       <ul className="navbar__main">
         <li key="home" className="navbar__item">
-          <Link className="navbar__link" to="/" onClick={() => closeNav()}>
+          <Link className="navbar__link" to="/gyms" onClick={() => closeNav()}>
             Gyms
           </Link>
         </li>
@@ -31,7 +31,7 @@ function Navigation({ onClose, isClosed }) {
           </Link>
         </li>
         <li key="about" className="navbar__item">
-          <Link className="navbar__link" to="/about">
+          <Link className="navbar__link" to="/">
             About
           </Link>
         </li>

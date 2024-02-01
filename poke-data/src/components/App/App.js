@@ -9,6 +9,7 @@ import { gyms, gymPokemon } from "../../utils/constants";
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState, useMemo } from "react";
 import _ from "lodash";
+import About from "../About/About";
 
 function App() {
   const endPoints = useMemo(() => {
@@ -85,6 +86,9 @@ function App() {
       <Header onClose={closeNav} onOpen={openNav} isClosed={navIsClosed} />
       <Switch>
         <Route exact path="/">
+          <About />
+        </Route>
+        <Route exact path="/gyms">
           <Main />
         </Route>
         <Route path="/cardContainer">
