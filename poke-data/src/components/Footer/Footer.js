@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__sources">
-        <p className="footer__sources-header">Sources</p>
+        <p className="footer__sources-header">Sources:</p>
         <a
           className="footer__source"
           href="https://pokeapi.co/"
@@ -25,6 +25,9 @@ function Footer() {
       </div>
       <div className="footer__author">
         <p className="footer__name">Created by Ryan Staats</p>
+      </div>
+      <div className="footer__source">
+        <p className="footer__source-code">Source code found here: </p>
         <a
           className="footer__github"
           href="https://github.com/rstaats0925"
