@@ -19,6 +19,7 @@ function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [navIsClosed, setNavIsClosed] = useState(true);
   const [selectedCard, setSelectedCard] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   function handleCardClick(data) {
     setModalIsOpen(true);
@@ -56,7 +57,7 @@ function App() {
   useEffect(() => {
     const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
-
+    setIsLoading(true);
     endPoints.forEach((r) => {
       promiseArray.push(
         fetch(`${baseUrl}${r}`)
@@ -76,8 +77,8 @@ function App() {
       const completeData = data.map((element, index) => {
         return _.merge({}, element, gymPokemon[index]);
       });
-
       setPokedata(completeData);
+      setIsLoading(false);
     });
   }, [endPoints]);
 
@@ -92,7 +93,11 @@ function App() {
           <Main />
         </Route>
         <Route path="/cardContainer">
-          <CardContainer data={pokeData} handleCardClick={handleCardClick} />
+          <CardContainer
+            data={pokeData}
+            handleCardClick={handleCardClick}
+            isLoading={isLoading}
+          />
         </Route>
       </Switch>
       <Footer />

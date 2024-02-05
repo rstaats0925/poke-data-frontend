@@ -1,7 +1,8 @@
 import "./CardContainer.css";
 import Card from "../Card/Card";
+import Preloader from "../Preloader/Preloader";
 
-export default function CardContainer({ data, handleCardClick }) {
+export default function CardContainer({ data, handleCardClick, isLoading }) {
   const pokemonCards = data.map((cardData) => {
     return (
       <li key={cardData.key}>
@@ -20,6 +21,7 @@ export default function CardContainer({ data, handleCardClick }) {
   return (
     <div className="main">
       <div className="main__wrapper">
+        {isLoading && <Preloader />}
         <ul className="main__grid">{pokemonCards}</ul>
       </div>
     </div>
