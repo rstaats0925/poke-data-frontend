@@ -17,7 +17,7 @@ function App() {
   }, []);
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [navIsClosed, setNavIsClosed] = useState(true);
+  const [navIsClosed, setNavIsClosed] = useState(false);
   const [selectedCard, setSelectedCard] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 

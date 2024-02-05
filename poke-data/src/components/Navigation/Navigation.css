@@ -18,10 +18,11 @@
   position: fixed;
   inset: 0 0 0 30%;
   transition: transform 0.8s ease;
+  transform: translateX(100%);
 }
 
-.navbar_closed {
-  transform: translateX(100%);
+.navbar_open {
+  transform: translateX(0);
 }
 .navbar__main {
   padding: 0 30px;
@@ -55,6 +56,7 @@
     position: static;
     transition: none;
     background-image: none;
+    transform: translateX(0%);
   }
 
   .navbar__main {
@@ -66,7 +68,7 @@
     display: none;
   }
 
-  .navbar_closed {
-    transform: translateX(0);
+  .navbar_open {
+    transform: translateX(0%);
   }
 }

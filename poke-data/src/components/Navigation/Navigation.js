@@ -7,7 +7,7 @@ function Navigation({ onClose, isClosed }) {
   };
 
   return (
-    <nav className={`${isClosed ? "navbar navbar_closed" : "navbar"}`}>
+    <nav className={`${isClosed ? "navbar" : "navbar navbar_open"}`}>
       <button
         className="navbar__close-btn"
         type="button"
