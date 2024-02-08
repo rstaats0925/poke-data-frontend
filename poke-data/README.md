@@ -34,3 +34,5 @@ The data for this app came from two sources:
 ![mobile pokemon modal]("/images/pokedata-mobile-modal.png")
 
 ### Link to github pages
+
+[pokedata](https://rstaats0925.github.io/poke-data-frontend/)
