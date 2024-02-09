@@ -1,0 +1,20 @@
+.main {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.main__wrapper {
+  width: 100%;
+}
+
+.main__grid {
+  width: 100%;
+  padding: 15px 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  list-style-type: none;
+  margin-top: 50px;
+  box-sizing: border-box;
+}

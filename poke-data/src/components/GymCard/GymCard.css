@@ -1,0 +1,26 @@
+.gymCard {
+  outline: 1px solid black;
+  border-radius: 25px;
+  width: 270px;
+  height: 300px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+.gymCard__header {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.gymCard__summary {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gymCard__team {
+  list-style-type: disc;
+}
+
+.gymCard__rewards-list {
+  list-style-type: disc;
+}

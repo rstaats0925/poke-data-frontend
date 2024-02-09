@@ -1,0 +1,35 @@
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.footer__sources {
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer__sources-header {
+  margin: 0;
+}
+
+.footer__author {
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer__source {
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer__name {
+  margin: 0;
+}
+
+.footer__source-code {
+  margin: 0;
+}

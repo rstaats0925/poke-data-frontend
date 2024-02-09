@@ -1,0 +1,17 @@
+.about {
+  margin-top: 80px;
+  box-sizing: border-box;
+  padding: 0 25px;
+  line-height: 1.5;
+}
+
+.about__header {
+  text-align: center;
+  font-size: 32px;
+}
+
+@media (min-width: 600px) {
+  .about__paragraph {
+    font-size: 18px;
+  }
+}

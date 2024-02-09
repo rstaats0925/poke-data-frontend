@@ -1,0 +1,17 @@
+.error-display {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.error-display__message {
+  color: #f00;
+  font-size: 24px;
+}
