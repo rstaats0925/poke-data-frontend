@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/poke-data-frontend/static/css/main.ae7d7c30.css",
-    "main.js": "/poke-data-frontend/static/js/main.1405c632.js",
+    "main.css": "/poke-data-frontend/static/css/main.407524ed.css",
+    "main.js": "/poke-data-frontend/static/js/main.e141f344.js",
     "static/js/787.08ca9efe.chunk.js": "/poke-data-frontend/static/js/787.08ca9efe.chunk.js",
     "static/media/PokemonSolidNormal-xyWR.woff": "/poke-data-frontend/static/media/PokemonSolidNormal-xyWR.60b27dcd41b569f07b87.woff",
     "index.html": "/poke-data-frontend/index.html",
     "static/media/close-icon.svg": "/poke-data-frontend/static/media/close-icon.5c6cd17c4693737efbb3.svg",
-    "main.ae7d7c30.css.map": "/poke-data-frontend/static/css/main.ae7d7c30.css.map",
-    "main.1405c632.js.map": "/poke-data-frontend/static/js/main.1405c632.js.map",
+    "main.407524ed.css.map": "/poke-data-frontend/static/css/main.407524ed.css.map",
+    "main.e141f344.js.map": "/poke-data-frontend/static/js/main.e141f344.js.map",
     "787.08ca9efe.chunk.js.map": "/poke-data-frontend/static/js/787.08ca9efe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae7d7c30.css",
-    "static/js/main.1405c632.js"
+    "static/css/main.407524ed.css",
+    "static/js/main.e141f344.js"
   ]
 }
