@@ -12,8 +12,14 @@ export default function Modal({ data, onClose }) {
     onClose();
   };
 
+  const onRemoteClose = (event) => {
+    if (event.target === event.currentTarget) {
+      close();
+    }
+  };
+
   return (
-    <div className="modal">
+    <div className="modal" onClick={(event) => onRemoteClose(event)}>
       <div className="modal__content">
         <button
           className="modal__close-btn"
@@ -40,6 +46,3 @@ export default function Modal({ data, onClose }) {
     </div>
   );
 }
-
-// tasks
-// cards need background

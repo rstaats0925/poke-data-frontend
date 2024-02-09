@@ -1,4 +1,4 @@
-export const gyms = [
+export const GYMS = [
   {
     number: 1,
     leader: "Falkner",
@@ -97,7 +97,7 @@ export const gyms = [
   },
 ];
 
-export const gymPokemon = [
+export const GYMPOKEMON = [
   {
     key: 1,
     name: "pidgey",

@@ -5,7 +5,8 @@ import CardContainer from "../CardContainer/CardContainer";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Modal from "../Modal/Modal";
-import { gyms, gymPokemon } from "../../utils/constants";
+import { GYMS, GYMPOKEMON } from "../../utils/constants";
+import { getPokemon } from "../../utils/api";
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState, useMemo } from "react";
 import _ from "lodash";
@@ -13,13 +14,14 @@ import About from "../About/About";
 
 function App() {
   const endPoints = useMemo(() => {
-    return gyms.map((gym) => gym.team).flat();
+    return GYMS.map((gym) => gym.team).flat();
   }, []);
   const [pokeData, setPokedata] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [navIsClosed, setNavIsClosed] = useState(false);
+  const [navIsClosed, setNavIsClosed] = useState(true);
   const [selectedCard, setSelectedCard] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [fetchErrorOccurred, setFetchErrorOccurred] = useState(false);
 
   function handleCardClick(data) {
     setModalIsOpen(true);
@@ -55,35 +57,32 @@ function App() {
   }, [modalIsOpen]);
 
   useEffect(() => {
-    const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
     const promiseArray = [];
     setIsLoading(true);
-    endPoints.forEach((r) => {
+
+    endPoints.forEach((endpoint) => {
       promiseArray.push(
-        fetch(`${baseUrl}${r}`)
-          .then((res) => {
-            if (!res.ok) {
-              return Promise.reject(`Error: ${res.status}`);
-            }
-            return res.json();
-          })
-          .catch((err) => {
-            console.error(err);
-          })
+        getPokemon(endpoint).catch((err) => {
+          setFetchErrorOccurred(true);
+        })
       );
     });
 
-    Promise.all(promiseArray).then((data) => {
-      const completeData = data.map((element, index) => {
-        return _.merge({}, element, gymPokemon[index]);
-      });
-      setPokedata(completeData);
-      setIsLoading(false);
-    });
+    Promise.all(promiseArray)
+      .then((data) => {
+        const completeData = data.map((element, index) => {
+          return _.merge({}, element, GYMPOKEMON[index]);
+        });
+
+        setPokedata(completeData);
+        // setIsLoading(false);
+      })
+      .catch((err) => setFetchErrorOccurred(true))
+      .finally(() => setIsLoading(false));
   }, [endPoints]);
 
   return (
-    <div className="App">
+    <div className="app">
       <Header onClose={closeNav} onOpen={openNav} isClosed={navIsClosed} />
       <Switch>
         <Route exact path="/">
@@ -97,6 +96,7 @@ function App() {
             data={pokeData}
             handleCardClick={handleCardClick}
             isLoading={isLoading}
+            errorOccurred={fetchErrorOccurred}
           />
         </Route>
       </Switch>

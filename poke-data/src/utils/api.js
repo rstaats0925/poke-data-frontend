@@ -1,6 +1,10 @@
-const baseUrl = "https://pokeapi.co/api/v2/";
+const BASEURL = "https://pokeapi.co/api/v2/pokemon/";
 
-export async function getPokemon() {
-  const res = await fetch(`${baseUrl}pokemon/250`);
-  return await res.json();
+export function getPokemon(endpoint) {
+  return fetch(`${BASEURL}${endpoint}`).then((res) => {
+    if (!res.ok) {
+      return Promise.reject(`Error: ${res.status}`);
+    }
+    return res.json();
+  });
 }

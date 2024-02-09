@@ -1,10 +1,10 @@
 import "./Main.css";
 import { React } from "react";
 import GymCard from "../GymCard/GymCard";
-import { gyms } from "../../utils/constants";
+import { GYMS } from "../../utils/constants";
 
 function Main() {
-  const gymCards = gyms.map((cardData) => {
+  const gymCards = GYMS.map((cardData) => {
     return (
       <li key={cardData.number}>
         <GymCard gym={cardData} />
@@ -12,11 +12,11 @@ function Main() {
     );
   });
   return (
-    <main className="main">
+    <div className="main">
       <div className="main__gyms-wrapper">
         <ul className="main__gyms-grid">{gymCards}</ul>
       </div>
-    </main>
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ function Header({ onClose, onOpen, isClosed }) {
       </Link>
       <Navigation onClose={onClose} isClosed={isClosed} />
       <button
-        className="header__menu-btn"
+        className="menu-btn"
         type="button"
         onClick={() => openMobileMenu()}
       >

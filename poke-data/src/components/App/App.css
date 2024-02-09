@@ -1,7 +1,11 @@
 @import url("../../vendor/fonts/fonts.css");
 
-.App {
+.app {
   max-width: 1440px;
   margin: 0 auto;
   background-image: linear-gradient(to bottom right, #ffd700, #c0c0c0 60%);
+}
+
+body {
+  background-color: #c0c0c0;
 }
